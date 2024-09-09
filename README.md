@@ -47,6 +47,7 @@ See repo tacacsgui installation https://github.com/ichantio/tacacsgui-installati
 - You can find all the original code before I made any modification in the  
 [original_src](original_src/)  
 folder. Diff to your heart's content.
+- Disable update for tacacsGUI from `tacacsgui.com` to prevent catastrophic auto-update in production
 
 # License 
 GPL-3.0 license based on the original project.
