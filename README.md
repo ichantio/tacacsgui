@@ -40,6 +40,14 @@ This work made me consume copious amount of coffee. If you want to help me then 
 # Installation
 See repo tacacsgui installation https://github.com/ichantio/tacacsgui-installation/
 
+# What did you change?
+- Mostly so I can update the OS from Ubuntu 18 -> 22
+- Fix stuffs that I use and were broken in the process
+- Changed some codes so more references are local
+- You can find all the original code before I made any modification in the  
+[original_src](original_src/)  
+folder. Diff to your heart's content.
+
 # License 
 GPL-3.0 license based on the original project.
 
