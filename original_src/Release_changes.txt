@@ -1,0 +1,337 @@
+##############################
+Version_0.9.83 20201205
+	* MAVIS LDAP Improved
+	* Many bugs fixed
+##############################
+Version_0.9.82 20191018
+	* ACL Export/Import
+	* New API user group right - Add/Edit/Delete Object Address
+	* Hide menu items if user does not have rights
+	* LDAP Bind table now with Reference and Action columns
+	* Some bugs fixed
+##############################
+Version_0.9.81 20191011
+	* Device Export/Import
+	* Device Group Export/Import
+	* TACACS User Export/Import
+	* TACACS User Group Export/Import
+	* TACACS User Group can be associated with ACL
+	* Some bugs fixed
+##############################
+Version_0.9.80 20190917
+	* Logging bug fixed
+##############################
+Version_0.9.79 20190912
+	* Added Slave list on Dashboard
+	* New version of High Availability feature
+	* Email notification if Slave or Master down
+	* Upgrade Slaves from Master
+	* Self-test every 5 minutes
+	* Some bugs fixed
+##############################
+Version_0.9.78 20190829
+	* Skip Authe, Autho or Acc log. Useful for monitoring or another services
+	* Delete Authe, Autho log. Useful for monitoring or another services
+	* Minor bugs fixed
+##############################
+Version_0.9.77 20190820
+	* Added Huawei pattern
+	* Added Extreme Networks pattern
+	* Added any to ACL
+	* Many bugs fixed
+##############################
+Version_0.9.76 20190813
+	* Send random Local MAVIS password via email
+	* Send OTP MAVIS password via email
+	* Put hashed MD5 password
+##############################
+##############################
+Version_0.9.75 20190807
+	* Added LDAP Auth for API Users
+	* Some bugs fixed (Please use combination of Ctrl + Shift + R to clear browser cache)
+##############################
+Version_0.9.74 20190719
+	* Reference Sidebar for Services, ACLs, Addresses
+	* Some bugs fixed (Please use combination of Ctrl + Shift + R to clear browser cache)
+##############################
+Version_0.9.73 20190712
+	* Hello Angualar 8 (full re-builded gui)
+	* Add/Edit Address/Cmd Set from sidebar
+	* Virtual Scroll everywhere (to save your browser)
+	* Some bugs fixed
+##############################
+Version_0.9.72 20190627
+	* Hello IPv6 Support
+	* Now! Services can depend on ACL
+	* Now! Set multiple services for users or user groups
+	* New fast filter for side-bar items
+	* Address object preview on hover
+	* Some bugs fixed
+##############################
+Version_0.9.71 20190623
+	* Powerful filtering of AAA logs
+	* Some Bugs Fixed
+##############################
+Version_0.9.7 20190618
+	* New GUI
+##############################
+Version_0.9.63 20190328
+	* Hello Ubuntu 18.04
+##############################
+Version_0.9.62 20190320
+	* Configuration Manager (now Beta)
+	* Schema of Database changed!!! Some data in Configuration Manager can gone, sorry.
+	* Added integration between Tacacs AAA and Configuration Manager
+	* Added fast device import from TacacsGUI to Configuration Manager
+	* Improved CM Python script
+	* Some bug fixed
+##############################
+Version_0.9.61 20190312
+	* Configuration Manager (Alpha)
+	* Some bug fixed
+##############################
+Version_0.9.60 20190131
+	* Added Silver Peak Service pattern
+	* Added Syslog Settings for AAA of tac_plus
+	* Some bug fixed
+##############################
+Version_0.9.59 20190120
+	* Improved queries for widgets (thank for Raj, @rajjaisur)
+	* More Stable High Availability feature
+	* Improved Parser Notification settings
+	* Some bug fixed
+##############################
+Version_0.9.58 20181230
+	* You can predefine LDAP user.
+	* Enable or PAP password for LDAP user will be the same as login.
+	* You can enable default message for LDAP user.
+	* See you next year! Merry Christmas!
+	* Some bug fixed
+##############################
+Version_0.9.57 20181220
+	* Added Juniper Pattern.
+	* Added Juniper Command Set type.
+	* Some bug fixed
+##############################
+Version_0.9.56 20181217
+	* Added OpenLDAP support.
+	* Some bug fixed
+##############################
+Version_0.9.55 20181213
+	* Added support of multiple group for user. Tacacs user can manually select group while log in.
+	* Added Pattern for H3C devices
+	* Some bug fixed
+##############################
+Version_0.9.54 20181205
+	* New MAVIS Policy. There is only one MAVIS engine now.
+	* Some bug fixed
+##############################
+Version_0.9.53 20181130
+	* LDAP Module fix. If user doesn't match any tacacs group access restricted.
+##############################
+Version_0.9.52 20181129
+	* New LDAP Module. The easiest way to connect you DC.
+	* Now LDAP Groups inside of Tacacs User Groups
+	* Fast Access Restriction for Tacacs User Groups
+	* Some Bugs fixed
+##############################
+Version_0.9.51 20181121
+	* Minor improvements
+	* Some Bugs fixed
+##############################
+Version_0.9.50 20181121
+	* Added Service Profiles
+	* Added CMD attributes base
+	* Added many new bugs
+	* Some Bugs fixed
+##############################
+Version_0.9.47 20181106
+	* Added attributes Valid From, Valid Until for Tacacs User and Tacacs User Groups
+	* Added attributes Client IP and Server IP for Tacacs User and Tacacs User Groups
+	* Added attributes Default User Group and ACL for Tacacs Devices and Device Groups
+	* Added attribute Connection Timeout for Tacacs Devices and Device Groups
+	* Some Bugs fixed
+##############################
+Version_0.9.46 20181101
+	* Added MAVIS Local
+	* Tacacs User can change his password via GUI or CLI (if device support that)
+	* DES hashing deprecated (more secure use plain text, IMHO)! Be Ware!
+	* !!Be Ware!! Re-created PAP Auth logic, if you use PAP passwords somewhere please set PAP settings again
+	* SMTP fixed. Now it can work without auth and encryption
+	* Fixed bug with backup download issue, but to fix it you should download installation script and re-install TacacsGUI
+	* Some Bugs fixed
+##############################
+Version_0.9.45 20181027
+	* Added Notification for bad Authorization and Authentification
+	* Bug fixed
+##############################
+Version_0.9.44 20181006
+	* Bug fixed
+##############################
+Version_0.9.43 20180924
+	* New charts on dashboard
+	* Bug fixed
+##############################
+Version_0.9.42 20180924
+	* HA Fix
+	* New key generator
+##############################
+Version_0.9.41 20180924
+	* Dashboard diagram fix
+	* Added some tools for developer
+##############################
+Version_0.9.40 20180924
+	* Added High Availability feature (re-installation required)
+	* Many bugs fixed
+##############################
+Version_0.9.31 20180803
+	* Added separated database for logging
+##############################
+Version_0.9.30 20180727
+	* Network interfaces configuration (also via terminal ./interfaces.sh)
+	* tac_plus now works as service (autorun enabled by default)
+	* Now log will be stored inside of /var/log/tacacsgui/
+	* Fixed some bugs
+	* Soon will be big update and it will require re-installation, sorry
+##############################
+Version_0.9.29 20180720
+	* Fix with Tacacs Key issue
+##############################
+Version_0.9.28 20180719
+	* Added Time settings
+	* Added search for select2.js elements
+	* Added offline google fonts
+	* Maybe some bugs fixed
+##############################
+Version_0.9.27 20180716
+	* Quick Fix
+##############################
+Version_0.9.26 20180716
+	* Added tab Device Info
+	* Bug Fix/Bugs Added
+##############################
+Version_0.9.25 20180715
+	* API User rights rebuilded (now user won't see database if it doesn't have special rights)
+	* Added Password Policy
+	* Added SMTP Engine
+	* Bug Fix/Bugs Added
+##############################
+Version_0.9.24 20180708
+	* IMPORTANT! this update will work properly only after soft reinstallation
+	*New Filter for tables
+	*CSV Import/Export
+	*Table selection
+	*Bug Fix/Bugs Added
+##############################
+Version_0.9.23 20180701
+	* IMPORTANT! this update will work properly only after soft reinstallation
+	*Added Backup System, there are three variances of backup: tacacs config, api config, full (without log)
+	*Added Configuration Preview for Tac Users, Devices, Groups and ACL
+	*Some bug was fixed
+##############################
+Version_0.9.22 20180627
+	*Added Daemon Start/Stop/Reload access restriction
+	*Fix Bug this integration with Win2016
+##############################
+Version_0.9.21 20180626
+	*Bug fixing. I hope backup work properly now
+##############################
+Version_0.9.20 20180626
+	*Bug fixing ( and add new bugs :( )
+##############################
+Version_0.9.19 20180626
+	*Bug fixing
+	*Check update in sign in
+	*Added first steps on backup
+##############################
+Version_0.9.18 20180625
+	*Dashboard request was separated on three parts (daemon status, general statistics, top users and devices)
+	*Added pie filtering on dashboard
+##############################
+Version_0.9.17 20180623
+	*Fixed bug with huge number of queries for the dashboard statistics
+##############################
+Version_0.9.16 20180623
+	*Fixed bug with update button (one more time, I hope it is the last one)
+##############################
+Version_0.9.15 20180623
+	*Fixed bug with update button
+##############################
+Version_0.9.14 20180623
+	*Extra Options added to configuration generator
+	*Added restriction for passwords, you can use char *
+	*Added restriction for DES passwords, it must be less or equal 8
+##############################
+Version_0.9.13 20180614
+	*Code optimization (new JS), more stability. e.g. ACL editor works in different browsers now
+	*Fixed bug with tacacs key for device groups
+##############################
+Version_0.9.11 20180614
+	*Fixed bug with tacacs key, now you can use = char but also added restriction to ',",/ - these chars now forbitten
+	*Added ability to hide LDAP Password
+##############################
+Version_0.9.10 20180526
+	*Fixed bug this privilege-level and default cmd service for Service section
+	*Fixed 404 page
+##############################
+Version_0.9.9 20180525
+	*Added NX-OS Support (if true user will get pap parameter)
+	*API User without right to Add/Edit/Del API User can change yourself settings
+	*Fixed bug with enable/disable Tac User
+	*Fixed bug SMS Test Auth
+##############################
+Version_0.9.7 20180513
+	*Fix bug accounting log for Accedian devices
+##############################
+Version_0.9.6 20180412
+	*Added SMS Authentification (SMPP client v.3.4)
+	*Some bugs fixed
+##############################
+Version_0.9.4 20180405
+	*Some bugs fixed
+##############################
+Version_0.9.3 20180405
+	*Added function change password before loging for API users
+##############################
+Version_0.9.2 20180404
+	*Added services for tac_user and tac_user_group
+	*Now you can't delete yorself as api user
+	*When you delete ACL or Service that was used, it will be replaced as None
+	*Some critical bugs fixed, related to php 7.2
+##############################
+Version_0.9.1 20180330
+	*Added OTP Authorization limits for period and digits
+##############################
+Version_0.9.0 20180330
+	*Added OTP Authorization (Experimental)
+	*FULL OF CHANGES CONTACT ME BEFORE UPDATE - developer@tacasgui.com (also available in Skype)
+##############################
+Version_0.8.14 20180326
+	*Added Services section
+##############################
+Version_0.8.12 20180326
+	*Changed User Group Modal
+	*Added User Group Priv-Lvl
+	*Added User Group ACL
+	*Added User Group Default Service Attr
+	*Fixed bug with ACL: when you add ACE, action didn't applied
+##############################
+Version_0.8.10 20180322
+	*Added LDAP support
+##############################
+Version_0.8.7 20180322
+	GUI changes:
+	* added meta no cache
+	* fixed entrance of lockscreen
+##############################
+##############################
+Version_0.8.6 20180321
+	* If tac_user group doesn't set in a table it is as -Not set-
+	* Added Privilege Level for tac_user
+	* Added ACL selection for tac_user
+##############################
+Version_0.8.4 20180319
+	* Added README description
+	* Added some kind of debug output for dashboard
+	* Fixed bug: DES encryption work properly now
+	* Fixed bug: changed "failed auth" link on dashboard
