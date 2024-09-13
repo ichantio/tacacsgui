@@ -1,58 +1,76 @@
-# TACACSGUI
-TACACSGUI - Updated for Newer OS
+# Updated TACACSGUI
+Updated TACACSGUI  
+For replacing instances that running on EOL Ubuntu 18.04 and nearly EOL Ubuntu 20.04.  
+There is no update on the original repo since 2020.  
+I really hope this will help you as well.
 
 # DONATION
 This work made me consume copious amount of coffee. If you want to help me then get me some more.  
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/vlab)
 
 # DISCLAIMER
-- I am NOT a web developer.
-- I fumble through the code and fix what I can so it works on Ubuntu 22.04 with newer software packages.
-- SUPPORT: None, zip, nada. No support is available private or otherwise.
-- If you create an github issue, I **MAY** look at this and attempt to fix it whenever I have free time.
+- I am _**NOT**_ a web developer.
+- Ubuntu 18.04 is EOL and 20.04 is not far away. I needed this to work on a newer version so I tried my best.
+- SUPPORT: Pretty much none, zip, nada, etc. No support is available private or otherwise.
+- If you create an github issue, I _**MAY**_ look at this and attempt to fix it whenever I have free time.
+- I will not accept any pull request that not actually for fixing broken functions. 
 
 # Tested on
-- Ubuntu Server 22.04 LTS Standard Installation
-- PHP8.3
-- Python3.10.12
-- MySQL 8.0.39
+
+OS                                | PHP       | Python        | MySQL        | tac_plus
+---                               | ---       | ---           | ---          | ---
+Ubuntu Server 22.04 LTS STANDARD  | PHP8.3.11 | Python3.10.12 | MySQL 8.0.39 | tac_plus latest dl 2024-09
+Ubuntu Server 24.04 LTS STANDARD  | PHP8.3.6  | Python3.12.3  | MySQL 8.0.39 | tac_plus latest dl 2024-09
+
+:heavy_exclamation_mark::warning::heavy_exclamation_mark: NOT TESTED but will probably work on Debian 10 and 12 (very similar software repos)
 
 # What does work (for me)
-- tac_plus daemon with spawnd (LWRES has been deprecated by all platforms)
+- tac_plus PCRE2/CRYPTO/CURL/SSL
 - WEB GUI - tac_plus:
-  - TACACS User: Create/Edit
-  - TACACS Devices: Create/Edit
-  - TACACS Groups: Create/Edit
-  - TACACS ACL: Create/Edit
-  - TACACS Objects: Addresses
+  - :white_check_mark: TACACS Global settings: OK
+  - :white_check_mark: TACACS Users: Create/Edit
+  - :white_check_mark: TACACS User Groups: Create/Edit
+  - :white_check_mark: TACACS Devices: Create/Edit
+  - :white_check_mark: TACACS Device Groups: Create/Edit
+  - :white_check_mark: TACACS Services: Create/Edit
+  - :white_check_mark: TACACS ACL: Create/Edit
+  - :white_check_mark: TACACS Objects: Addresses
+  - :white_check_mark: TACACS Objects: Command Sets
+ 
 
-- WEB GUI Admin:  
-  - TACACS GUI Users: Create/Edit
-  - DB Backup: Create/Delete/Download
-  - MAVIS: Local DB works
-  - Settings: Time (with NTP)
-  - Network: View (**I RECOMMEND YOU SET NETWORK VIA UBUNTU DIRECTLY**)
-  - Logging: seems ok
-  - Update: DISABLE
+- WEB GUI - Admin:  
+  - :white_check_mark: TACACS GUI Users: Create/Edit
+  - :white_check_mark: DB Backup: Create/Delete/Download
+  - :white_check_mark: MAVIS: Local DB works, OTP works
+  - :white_check_mark: Settings: Time (with NTPSEC or NTP)
+  - :white_check_mark: Network: View (**I RECOMMEND YOU SET NETWORK VIA UBUNTU NETPLAN DIRECTLY**)
+  - :white_check_mark: Logging: seems ok
+  - :white_check_mark: Update: DISABLE
 
-- THE REST WERE NOT TESTED!
+- WEG GUI - Configuration Manager:
+:white_check_mark: Work OK but not sure if anyone uses it. Not too sure you should use it as well
+
+:heavy_exclamation_mark::warning::heavy_exclamation_mark: THE REST WERE NOT TESTED!
 
 # Installation
-See repo tacacsgui installation https://github.com/ichantio/tacacsgui-installation/
+See my installer repo [tacacsgui-installation](https://github.com/ichantio/tacacsgui-installation/)  
+I wrote a new one from scratch. Tested on both Ubuntu 22.04 and 24.04.
 
-# What did you change?
-- Mostly so I can update the OS from Ubuntu 18 -> 22
-- Fix stuffs that I use and were broken in the process
-- Changed some codes so more references are local
-- You can find all the original code before I made any modification in the  
-[original_src](original_src/)  
-folder. Diff to your heart's content.
-- Disable update for tacacsGUI from `tacacsgui.com` to prevent catastrophic auto-update in production
+# Code status
+- Released as 1.0.0
+- See [CHANGELOGS](CHANGELOGS.md)
 
 # License 
-GPL-3.0 license based on the original project.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  
+:heavy_exclamation_mark: Matching the original project.
+
+# Author
+:computer: [@me](https://github.com/ichantio)
 
 # Original Author
-- tac_plus: tacacs daemon by Marc Huber: https://projects.pro-bono-publico.de/event-driven-servers/doc/tac_plus.html
-- TACACSGUI: Aleksey Mochalin https://tacacsgui.com/
-- Original Repo: https://github.com/tacacsgui/tacacsgui
+- tac_plus: tacacs daemon by Marc Huber:  
+https://projects.pro-bono-publico.de/event-driven-servers/doc/tac_plus.html
+- TACACSGUI: Aleksey Mochalin  
+https://tacacsgui.com/  
+Original TACACS GUI Repo:  
+https://github.com/tacacsgui/tacacsgui

@@ -433,3 +433,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Remove all mysql files
+*.sql
+**.sql

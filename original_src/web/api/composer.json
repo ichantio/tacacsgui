@@ -1,0 +1,27 @@
+{
+    "require": {
+        "slim/slim": "^3.8",
+        "illuminate/database": "^5.5",
+        "respect/validation": "^1.1",
+        "slim/csrf": "^0.8.2",
+        "spomky-labs/otphp": "^10.0",
+        "bacon/bacon-qr-code": "^1.0",
+        "irazasyed/telegram-bot-sdk": "^2.0",
+        "php-smpp/php-smpp": "^1.2",
+        "doctrine/dbal": "^2.7",
+        "phpmailer/phpmailer": "^6.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "webmozart/json": "^1.2",
+        "adldap2/adldap2": "^9.1",
+        "symfony/yaml": "^4.2",
+        "tuupola/slim-jwt-auth": "^3.3"
+    },
+	"autoload": {
+		"psr-4": {
+			"tgui\\": "app"
+		}
+	},
+  "repositories": {
+    "packagist": { "url": "https://packagist.org", "type": "composer" }
+  }
+}
