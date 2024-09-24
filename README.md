@@ -25,32 +25,64 @@ Ubuntu Server 24.04 LTS STANDARD  | PHP8.3.6  | Python3.12.3  | MySQL 8.0.39 | t
 :heavy_exclamation_mark::warning::heavy_exclamation_mark: NOT TESTED but will probably work on Debian 10 and 12 (very similar software repos)
 
 # What does work (for me)
-- tac_plus PCRE2/CRYPTO/CURL/SSL
-- WEB GUI - tac_plus:
-  - :white_check_mark: TACACS Global settings: OK
-  - :white_check_mark: TACACS Users: Create/Edit
-  - :white_check_mark: TACACS User Groups: Create/Edit
-  - :white_check_mark: TACACS Devices: Create/Edit
-  - :white_check_mark: TACACS Device Groups: Create/Edit
-  - :white_check_mark: TACACS Services: Create/Edit
-  - :white_check_mark: TACACS ACL: Create/Edit
-  - :white_check_mark: TACACS Objects: Addresses
-  - :white_check_mark: TACACS Objects: Command Sets
+## tac_plus
+PCRE2/CRYPTO/CURL/SSL
+
+## WEB GUI - tac_plus:
+- :white_check_mark: TACACS Global settings: OK
+- :white_check_mark: TACACS Users: Create/Edit
+- :white_check_mark: TACACS User Groups: Create/Edit
+- :white_check_mark: TACACS Devices: Create/Edit
+- :white_check_mark: TACACS Device Groups: Create/Edit
+- :white_check_mark: TACACS Services: Create/Edit
+- :white_check_mark: TACACS ACL: Create/Edit
+- :white_check_mark: TACACS Objects: Addresses
+- :white_check_mark: TACACS Objects: Command Sets
  
 
-- WEB GUI - Admin:  
-  - :white_check_mark: TACACS GUI Users: Create/Edit
-  - :white_check_mark: DB Backup: Create/Delete/Download
-  - :white_check_mark: MAVIS: Local DB works, OTP works
-  - :white_check_mark: Settings: Time (with NTPSEC or NTP)
-  - :white_check_mark: Network: View (**I RECOMMEND YOU SET NETWORK VIA UBUNTU NETPLAN DIRECTLY**)
-  - :white_check_mark: Logging: seems ok
-  - :white_check_mark: Update: DISABLE
+## WEB GUI - Admin:  
+- :white_check_mark: TACACS GUI Users: Create/Edit
+- :white_check_mark: DB Backup: Create/Delete/Download
+- :white_check_mark: MAVIS: Local DB works, OTP works
+- :white_check_mark: Settings: Time (with NTPSEC or NTP)
+- :white_check_mark: Network: View (**I RECOMMEND YOU SET NETWORK VIA UBUNTU NETPLAN DIRECTLY**)
+- :white_check_mark: Logging: seems ok
+- :white_check_mark: Update: DISABLE
 
-- WEG GUI - Configuration Manager:
+## WEG GUI - Configuration Manager:
 :white_check_mark: Work OK but not sure if anyone uses it. Not too sure you should use it as well
 
 :heavy_exclamation_mark::warning::heavy_exclamation_mark: THE REST WERE NOT TESTED!
+
+## Added function
+Added parser filter to keep the logs clean. The filters below happen _**BEFORE**_ logs ingestion.  
+Various system has default auto system cmd that generate a lot of logs when a user is logged in.  
+These filters give you ability to filter them out.
+
+- You can edit the filters at 
+```bash
+# Accounting filter
+/opt/tgui_data/parser/acc-filter.txt
+# Authorisation filter
+/opt/tgui_data/parser/autho-filter.txt
+# Authentication filter
+/opt/tgui_data/parser/authe-filter.txt
+```
+
+- Support format: simple regular expression. Example below
+```bash
+# Comment line starting with # is ok
+
+# ^ Empty line like above will be ignored
+# Simple regex to filter out automation host
+robotuser.*192.168.1.10
+robotuser.*control-node.lan
+_ses_open$
+bin.[a-z]{2,5}.*exit=.$
+# DO NOT USE SELECTOR OR FORMAT
+# >> THIS WILL NOT WORK: bin.[a-z]{2,5}\sexit=(0|1)$
+# >> THIS WILL NOT WORK: bin.[a-z]{2,5}\sexit=\(0\|1\)$
+```
 
 # Installation
 See my installer repo [tacacsgui-installation](https://github.com/ichantio/tacacsgui-installation/)  
