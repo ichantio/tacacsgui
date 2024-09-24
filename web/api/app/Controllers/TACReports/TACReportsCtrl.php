@@ -33,10 +33,13 @@ class TACReportsCtrl extends Controller
 			return $res -> withStatus(401) -> write(json_encode($data));
 		}
 		//INITIAL CODE////END//
+		$rightNoWTime = date('Y-m-d H:i:s', time());
+		$oneWeekOldTime = date('Y-m-d H:i:s', strtotime('-1 week'));
+		$sixMonthOldTime = date('Y-m-d H:i:s', strtotime('-6 month'));
 
 		$weekTimeRange=array(
-			date('Y-m-d H:i:s', strtotime( trim( shell_exec(TAC_ROOT_PATH . "/main.sh ntp get-time") ))-(60*60*24*7+1)),
-			trim( shell_exec(TAC_ROOT_PATH . "/main.sh ntp get-time") )
+			$oneWeekOldTime,
+			$rightNoWTime
 		);
 		$data['range']=$weekTimeRange;
 		$data['ha'] = [
@@ -55,9 +58,9 @@ class TACReportsCtrl extends Controller
   		" (SELECT COUNT(*) FROM tgui.tac_users where `disabled` = '1') as users_disabled, ".
   		' (SELECT COUNT(*) FROM tgui.tac_devices) as devices,'.
   		" (SELECT COUNT(*) FROM tgui.tac_devices where `disabled` = '1') as devices_disabled, ".
-  		" (SELECT COUNT(*) FROM tgui_log.tac_log_authentication) as authe, ".
-  		" (SELECT COUNT(*) FROM tgui_log.tac_log_authorization) as autho, ".
-  		" (SELECT COUNT(*) FROM tgui_log.tac_log_accounting) as acc, ".
+  		" (SELECT COUNT(*) FROM tgui_log.tac_log_authentication where `date` > '".$sixMonthOldTime."') as authe, ".
+  		" (SELECT COUNT(*) FROM tgui_log.tac_log_authorization where `date` > '".$sixMonthOldTime."') as autho, ".
+  		" (SELECT COUNT(*) FROM tgui_log.tac_log_accounting where `date` > '".$sixMonthOldTime."') as acc, ".
   		" (SELECT COUNT(*) FROM tgui_log.tac_log_authentication where `date` between '".$weekTimeRange[0]."' and '".$weekTimeRange[1]."' and (`action` LIKE '%fail%') OR (`action` LIKE '%deny%') ) as authe_err ") );
 
 			$data['widgets'][0]->TACVER = TACVER;
